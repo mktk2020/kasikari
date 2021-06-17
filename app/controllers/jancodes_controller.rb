@@ -25,7 +25,7 @@ class JancodesController < ApplicationController
 
     respond_to do |format|
       if @jancode.save
-        format.html { redirect_to @jancode, notice: "Jancode was successfully created." }
+        format.html { redirect_to "/jancodes" }
         format.json { render :show, status: :created, location: @jancode }
       else
         format.html { render :new, status: :unprocessable_entity }
