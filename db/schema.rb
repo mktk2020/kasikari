@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_011119) do
+ActiveRecord::Schema.define(version: 2021_06_17_030848) do
 
   create_table "jancodes", force: :cascade do |t|
     t.integer "jancode"
     t.integer "categoryno"
     t.text "item"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lendingitems", force: :cascade do |t|
+    t.integer "jancode"
+    t.text "item"
+    t.text "category"
+    t.text "image_name"
+    t.integer "price"
+    t.integer "days"
+    t.text "memo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
