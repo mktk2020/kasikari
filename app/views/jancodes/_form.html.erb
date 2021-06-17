@@ -1,0 +1,32 @@
+<%= form_with(model: jancode) do |form| %>
+  <% if jancode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jancode.errors.count, "error") %> prohibited this jancode from being saved:</h2>
+
+      <ul>
+        <% jancode.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :jancode %>
+    <%= form.number_field :jancode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoryno %>
+    <%= form.number_field :categoryno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item %>
+    <%= form.text_area :item %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
