@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Jancode:</strong>
+  <strong>JANコード:</strong>
   <%= @jancode.jancode %>
 </p>
 
 <p>
-  <strong>Categoryno:</strong>
+  <strong>カテゴリーNo:</strong>
   <%= @jancode.categoryno %>
 </p>
 
 <p>
-  <strong>Item:</strong>
+  <strong>商品名:</strong>
   <%= @jancode.item %>
 </p>
 
-<%= link_to 'Edit', edit_jancode_path(@jancode) %> |
-<%= link_to 'Back', jancodes_path %>
+<%= link_to '変更', edit_jancode_path(@jancode) %> |
+<%= link_to '戻る', jancodes_path %>

@@ -51,7 +51,7 @@ class JancodesController < ApplicationController
   def destroy
     @jancode.destroy
     respond_to do |format|
-      format.html { redirect_to jancodes_url, notice: "Jancode was successfully destroyed." }
+      format.html { redirect_to jancodes_url, notice: "データが削除されました。" }
       format.json { head :no_content }
     end
   end

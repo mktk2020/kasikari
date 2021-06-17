@@ -18,9 +18,9 @@
         <td><%= jancode.jancode %></td>
         <td><%= jancode.categoryno %></td>
         <td><%= jancode.item %></td>
-        <td><%= link_to 'Show', jancode %></td>
-        <td><%= link_to 'Edit', edit_jancode_path(jancode) %></td>
-        <td><%= link_to 'Destroy', jancode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '確認', jancode %></td>
+        <td><%= link_to '変更', edit_jancode_path(jancode) %></td>
+        <td><%= link_to '削除', jancode, method: :delete, data: { confirm: '本当に削除していいですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
