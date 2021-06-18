@@ -1,39 +1,39 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Jancode:</strong>
+  <strong>JANコード:</strong>
   <%= @lendingitem.jancode %>
 </p>
 
 <p>
-  <strong>Item:</strong>
+  <strong>商品名:</strong>
   <%= @lendingitem.item %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>カテゴリー名:</strong>
   <%= @lendingitem.category %>
 </p>
 
 <p>
-  <strong>Image name:</strong>
+  <strong>商品画像:</strong>
   <%= @lendingitem.image_name %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong>金額:</strong>
   <%= @lendingitem.price %>
 </p>
 
 <p>
-  <strong>Days:</strong>
+  <strong>貸出日数:</strong>
   <%= @lendingitem.days %>
 </p>
 
 <p>
-  <strong>Memo:</strong>
+  <strong>備考:</strong>
   <%= @lendingitem.memo %>
 </p>
 
-<%= link_to 'Edit', edit_lendingitem_path(@lendingitem) %> |
-<%= link_to 'Back', lendingitems_path %>
+<%= link_to '変更', edit_lendingitem_path(@lendingitem) %> |
+<%= link_to '戻る', lendingitems_path %>
