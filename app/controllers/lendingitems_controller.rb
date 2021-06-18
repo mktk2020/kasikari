@@ -51,7 +51,7 @@ class LendingitemsController < ApplicationController
   def destroy
     @lendingitem.destroy
     respond_to do |format|
-      format.html { redirect_to lendingitems_url, notice: "Lendingitem was successfully destroyed." }
+      format.html { redirect_to lendingitems_url, notice: "データが削除されました。" }
       format.json { head :no_content }
     end
   end
