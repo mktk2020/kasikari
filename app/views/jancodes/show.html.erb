@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>JANコード:</strong>
+  <%= @jancode.jancode %>
+</p>
+
+<p>
+  <strong>カテゴリーNo:</strong>
+  <%= @jancode.categoryno %>
+</p>
+
+<p>
+  <strong>商品名:</strong>
+  <%= @jancode.item %>
+</p>
+
+<%= link_to '変更', edit_jancode_path(@jancode) %> |
+<%= link_to '戻る', jancodes_path %>

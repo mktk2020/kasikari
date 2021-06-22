@@ -1,0 +1,52 @@
+<%= form_with(model: lendingitem) do |form| %>
+  <% if lendingitem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lendingitem.errors.count, "error") %> prohibited this lendingitem from being saved:</h2>
+
+      <ul>
+        <% lendingitem.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :JANコード %>
+    <%= form.number_field :jancode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :商品 %>
+    <%= form.text_area :item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :カテゴリー名 %>
+    <%= form.text_area :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :商品画像 %>
+    <%= form.text_area :image_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :金額 %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :貸出日数 %>
+    <%= form.number_field :days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :備考 %>
+    <%= form.text_area :memo %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録" %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>カテゴリ登録</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>カテゴリ名</th>
+      <th>カテゴリNo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.categoryname %></td>
+        <td><%= category.categoryno %></td>
+        <td><%= link_to '確認', category %></td>
+        <td><%= link_to '編集', edit_category_path(category) %></td>
+        <td><%= link_to '削除', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規作成', new_category_path %>

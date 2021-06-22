@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>JANコード登録</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>JANコード</th>
+      <th>カテゴリーNo</th>
+      <th>商品名</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jancodes.each do |jancode| %>
+      <tr>
+        <td><%= jancode.jancode %></td>
+        <td><%= jancode.categoryno %></td>
+        <td><%= jancode.item %></td>
+        <td><%= link_to '確認', jancode %></td>
+        <td><%= link_to '変更', edit_jancode_path(jancode) %></td>
+        <td><%= link_to '削除', jancode, method: :delete, data: { confirm: '本当に削除していいですか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規登録', new_jancode_path %>

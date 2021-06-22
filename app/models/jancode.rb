@@ -1,0 +1,2 @@
+class Jancode < ApplicationRecord
+end
