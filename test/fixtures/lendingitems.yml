@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  jancode: MyString
+  item: MyString
+  category: MyString
+  image_name: MyText
+  price: 1
+  days: 1
+  memo: MyText
+
+two:
+  jancode: MyString
+  item: MyString
+  category: MyString
+  image_name: MyText
+  price: 1
+  days: 1
+  memo: MyText

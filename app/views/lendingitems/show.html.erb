@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jancode:</strong>
+  <%= @lendingitem.jancode %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @lendingitem.item %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @lendingitem.category %>
+</p>
+
+<p>
+  <strong>Image name:</strong>
+  <%= @lendingitem.image_name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @lendingitem.price %>
+</p>
+
+<p>
+  <strong>Days:</strong>
+  <%= @lendingitem.days %>
+</p>
+
+<p>
+  <strong>Memo:</strong>
+  <%= @lendingitem.memo %>
+</p>
+
+<%= link_to 'Edit', edit_lendingitem_path(@lendingitem) %> |
+<%= link_to 'Back', lendingitems_path %>

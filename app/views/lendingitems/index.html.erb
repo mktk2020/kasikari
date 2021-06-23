@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lendingitems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jancode</th>
+      <th>Item</th>
+      <th>Category</th>
+      <th>Image name</th>
+      <th>Price</th>
+      <th>Days</th>
+      <th>Memo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lendingitems.each do |lendingitem| %>
+      <tr>
+        <td><%= lendingitem.jancode %></td>
+        <td><%= lendingitem.item %></td>
+        <td><%= lendingitem.category %></td>
+        <td><%= lendingitem.image_name %></td>
+        <td><%= lendingitem.price %></td>
+        <td><%= lendingitem.days %></td>
+        <td><%= lendingitem.memo %></td>
+        <td><%= link_to 'Show', lendingitem %></td>
+        <td><%= link_to 'Edit', edit_lendingitem_path(lendingitem) %></td>
+        <td><%= link_to 'Destroy', lendingitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lendingitem', new_lendingitem_path %>
