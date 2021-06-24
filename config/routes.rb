@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :lendingitems do
+    collection do 
+      get 'search'
+    end
+  end
   resources :lendingitems
   resources :jancodes
   resources :users

@@ -1,5 +1,6 @@
 class LendingitemsController < ApplicationController
   before_action :set_lendingitem, only: %i[ show edit update destroy ]
+  before_action :set_q, only: [:index, :search]
 
   # GET /lendingitems or /lendingitems.json
   def index
@@ -56,7 +57,14 @@ class LendingitemsController < ApplicationController
     end
   end
 
+  def search
+    @results = @q.result
+  end
   private
+
+  def set_q
+    @q = Lendingitem.ransack(params[:q])
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_lendingitem
       @lendingitem = Lendingitem.find(params[:id])
