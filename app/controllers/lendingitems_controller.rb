@@ -60,6 +60,10 @@ class LendingitemsController < ApplicationController
   def search
     @results = @q.result
   end
+
+  def kensaku
+    @q = Lendingitem.ransack(params[:q])
+  end
   private
 
   def set_q
