@@ -60,9 +60,14 @@ class LendingitemsController < ApplicationController
   def search
     @results = @q.result
   end
-
+  #商品検索
   def kensaku
     @q = Lendingitem.ransack(params[:q])
+  end
+
+  #確認画面
+  def kakunin
+    @lendingitem = Lendingitem.find(params[:id])
   end
   private
 
