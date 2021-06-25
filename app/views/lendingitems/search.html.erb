@@ -1,0 +1,32 @@
+<h1>検索結果</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Jancode</th>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Image name</th>
+            <th>Price</th>
+            <th>Days</th>
+            <th>Memo</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <% @results.each do |lendingitem| %>
+            <tr>
+                <td><%= lendingitem.jancode %></td>
+                <td><%= lendingitem.item %></td>
+                <td><%= lendingitem.category %></td>
+                <td><%= lendingitem.image_name %></td>
+                <td><%= lendingitem.price %></td>
+                <td><%= lendingitem.days %></td>
+                <td><%= lendingitem.memo %></td>
+                <td><%= link_to 'Show', lendingitem %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'Top', lendingitems_path %>
