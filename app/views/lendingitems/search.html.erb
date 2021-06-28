@@ -1,0 +1,32 @@
+<h1>検索結果</h1>
+<table>
+    <thead>
+        <tr>
+            <th>JANコード</th>
+            <th>商品名</th>
+            <th>カテゴリ</th>
+            <th>商品画像</th>
+            <th>金額</th>
+            <th>期間</th>
+            <th>備考</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <% @results.each do |lendingitem| %>
+            <tr>
+                <td><%= lendingitem.jancode %></td>
+                <td><%= lendingitem.item %></td>
+                <td><%= lendingitem.category %></td>
+                <td><%= lendingitem.image_name %></td>
+                <td><%= lendingitem.price %></td>
+                <td><%= lendingitem.days %></td>
+                <td><%= lendingitem.memo %></td>
+                <td><%= link_to 'Show', lendingitem %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to '検索画面へ戻る', controller: 'lendingitems', action: 'kensaku' %>
