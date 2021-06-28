@@ -4,6 +4,5 @@
 <hr>
 <div><%=link_to 'ログイン&gt;&gt;'.html_safe,
   {action:'login_check'} %></div>
-<div><%= link_to "ログアウト&gt;&gt;".html_safe,
-  destroy_account_session_path, 
-  method: :delete %></div>
+<div><%=link_to '新規登録&gt;&gt;'.html_safe,
+  '/accounts/sign_up' %></div>
