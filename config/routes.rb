@@ -6,6 +6,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  get 'hello/index'
+  get 'hello/login_check'
+
+  devise_for :accounts
+  
   resources :lendingitems
   resources :jancodes
   resources :users
