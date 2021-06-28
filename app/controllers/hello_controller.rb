@@ -3,7 +3,7 @@ class HelloController < ApplicationController
   before_action :authenticate_account!, only: :login_check
  
   def index
-    @msg = 'this is sample page.'
+    @msg = 'トップページ'
   end
 
   def login_check
