@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'hello/index'
+  get 'hello/login_check'
+  devise_for :accounts
   resources :lendingitems
   resources :jancodes
   resources :users
