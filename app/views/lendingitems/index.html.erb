@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lendingitems</h1>
+<h1>貸出商品一覧</h1>
 
 <table>
   <thead>
@@ -26,9 +26,9 @@
         <td><%= lendingitem.price %></td>
         <td><%= lendingitem.days %></td>
         <td><%= lendingitem.memo %></td>
-        <td><%= link_to 'Show', lendingitem %></td>
-        <td><%= link_to 'Edit', edit_lendingitem_path(lendingitem) %></td>
-        <td><%= link_to 'Destroy', lendingitem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', lendingitem %></td>
+        <td><%= link_to '変更', edit_lendingitem_path(lendingitem) %></td>
+        <td><%= link_to '削除', lendingitem, method: :delete, data: { confirm: '本当に削除していいですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,6 @@
 
 <br>
 
-<%= link_to 'New Lendingitem', new_lendingitem_path %>
+<h6><%= link_to '商品新規登録', new_lendingitem_path %></h6>
+<br>
+<h6><%= link_to '&lt;&lt;戻る'.html_safe,hello_login_check_path %></h6>
