@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'lendingitems/kensaku'
-  get 'lendingitems/kakunin/:id',to: "lendingitems#kakunin"
+  post 'lendingitems/kakunin/:id',to: "lendingitems#kakunin"
   resources :lendingitems do
     collection do 
       get 'search'
