@@ -26,7 +26,7 @@ class LendingitemsController < ApplicationController
 
     respond_to do |format|
       if @lendingitem.save
-        format.html { redirect_to @lendingitem, notice: "Lendingitem was successfully created." }
+        format.html { redirect_to '/lendingitems', notice: "Lendingitem was successfully created." }
         format.json { render :show, status: :created, location: @lendingitem }
       else
         format.html { render :new, status: :unprocessable_entity }
