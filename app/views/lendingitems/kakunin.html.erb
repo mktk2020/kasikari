@@ -7,7 +7,7 @@
     </tr>
     <tr>
         <td><%= @lendingitem.item %></td>
-        <td>期間</td>
-        <td>金額</td>
+        <td><%= @num %></td>
+        <td><%= @lendingitem.price.to_i * @num.to_i %></td>
     </tr>
 </table>
