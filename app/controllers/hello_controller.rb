@@ -8,6 +8,6 @@ class HelloController < ApplicationController
 
   def login_check
     @account = current_account
-    @msg = 'account created at: ' + @account.created_at.to_s
+    @msg = 'メッセージ ' + @account.created_at.to_s
   end
 end

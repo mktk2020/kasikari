@@ -1,7 +1,14 @@
 <h1 class="display-4 text-primary">
-  <%= @account.email %></h1>
+  マイページ</h1>
+  <h4>メールアドレス</h4>
+  <h5><%= @account.email %></h5>
 <p><%= @msg %></p>
 <hr>
-<div><%=link_to '&lt;&lt;go back'.html_safe,
-  {action:'index'} %></div>
+<ul>
+  <h2><li><%=link_to '検索','/lendingitems/kensaku' %></li></h2>
+  <h2><li><%=link_to '商品登録','/lendingitems/new' %></li></h2>
+  <h2><li><%=link_to '貸出一覧','/lendingitems' %></li></h2>
+</ul>
+<h5><%= link_to "&lt;&lt;ログアウト".html_safe,destroy_account_session_path,method: :delete %></h5>
+
 

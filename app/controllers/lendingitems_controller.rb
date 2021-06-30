@@ -26,7 +26,7 @@ class LendingitemsController < ApplicationController
 
     respond_to do |format|
       if @lendingitem.save
-        format.html { redirect_to @lendingitem, notice: "Lendingitem was successfully created." }
+        format.html { redirect_to '/lendingitems', notice: "Lendingitem was successfully created." }
         format.json { render :show, status: :created, location: @lendingitem }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class LendingitemsController < ApplicationController
   def destroy
     @lendingitem.destroy
     respond_to do |format|
-      format.html { redirect_to lendingitems_url, notice: "Lendingitem was successfully destroyed." }
+      format.html { redirect_to lendingitems_url, notice: "登録商品を削除しました." }
       format.json { head :no_content }
     end
   end

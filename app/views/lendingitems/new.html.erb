@@ -1,5 +1,7 @@
-<h1>New Lendingitem</h1>
+<h1>貸出商品登録</h1>
 
 <%= render 'form', lendingitem: @lendingitem %>
-
-<%= link_to 'Back', lendingitems_path %>
+<br>
+<h5><%= link_to '登録商品一覧', lendingitems_path %></h5>
+<br>
+<h6><%= link_to '&lt;&lt;戻る'.html_safe,:back %></h6>
