@@ -14,6 +14,7 @@ class LendingitemsController < ApplicationController
   # GET /lendingitems/new
   def new
     @lendingitem = Lendingitem.new
+    @category = Category.all
   end
 
   # GET /lendingitems/1/edit
@@ -23,7 +24,8 @@ class LendingitemsController < ApplicationController
   # POST /lendingitems or /lendingitems.json
   def create
     @lendingitem = Lendingitem.new(lendingitem_params)
-
+    p @lendingitem
+    p lendingitem_params
     respond_to do |format|
       if @lendingitem.save
         format.html { redirect_to '/lendingitems', notice: "Lendingitem was successfully created." }
@@ -68,7 +70,6 @@ class LendingitemsController < ApplicationController
   #確認画面
   def kakunin
     @lendingitem = Lendingitem.find(params[:id])
-    @num = params['num']
   end
   private
 
