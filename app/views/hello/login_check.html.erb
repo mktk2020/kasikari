@@ -1,14 +1,15 @@
 <h1 class="display-4 text-primary">
   マイページ</h1>
 
-  <h5>ユーザ名</h5>
+  <p>●ユーザ名●</p>
   <%= @account.email %>
 <p><%= @msg %></p>
+<h4><%= link_to '〇ユーザ新規登録', '/users/new' %></h4>
 <hr>
 <ul>
-  <h2><li><%=link_to '検索','/lendingitems/kensaku' %></li></h2>
-  <h2><li><%=link_to '商品登録','/lendingitems/new' %></li></h2>
-  <h2><li><%=link_to '貸出一覧','/lendingitems' %></li></h2>
+  <h4><li><%=link_to '検索','/lendingitems/kensaku' %></li></h4>
+  <h4><li><%=link_to '商品登録','/lendingitems/new' %></li></h4>
+  <h4><li><%=link_to '貸出一覧','/lendingitems' %></li></h4>
 </ul>
 <h5><%= link_to "&lt;&lt;ログアウト".html_safe,destroy_account_session_path,method: :delete %></h5>
 
