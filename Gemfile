@@ -57,8 +57,10 @@ gem 'ransack'
 gem 'devise'
 
 # devise日本語化
-
 gem 'devise-i18n'
 
 gem 'devise-i18n-views'
+
+#画像アップロード用
+gem 'carrierwave', '~> 1.0'
 

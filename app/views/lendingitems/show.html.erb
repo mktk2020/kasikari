@@ -35,12 +35,11 @@
   <%= @lendingitem.memo %>
 </p>
 
-<%= link_to '変更', edit_lendingitem_path(@lendingitem) %> |
-<%= link_to '戻る', lendingitems_path %>
 <br>
 <%= form_with(url: {controller: 'lendingitems', action: 'kakunin', id: @lendingitem.id}) do |f| %>
   <label>期間</label>
   <%= f.number_field('num') %>
   <%= f.submit ('借りる')%>
 <% end %>
-<a href = "/lendingitems/kakunin/<%= @lendingitem.id %>" > 借りる</a>
+<br>
+<h6><%= link_to '&lt;&lt;戻る'.html_safe,:back %></h6>

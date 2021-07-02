@@ -21,10 +21,11 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
+    
     @user = User.new(user_params)
-
+    @user.email = @user.usermail
     respond_to do |format|
-      if @user.save
+     if @user.save
         format.html { redirect_to @user, notice: "User was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
