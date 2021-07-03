@@ -69,3 +69,6 @@ gem 'carrierwave', '~> 1.0'
 group :production do
   gem 'pg'
 end
+
+#ラインボット
+gem 'line-bot-api'
