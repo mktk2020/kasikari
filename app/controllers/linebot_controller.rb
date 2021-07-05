@@ -14,23 +14,14 @@ class LinebotController < ApplicationController
       events.each do |event|
         
         # event.message['text']でLINEで送られてきた文書を取得
-      if event.message['text'].include?("好き")
-        response = "すきすきすきすきすきすきすきぃぃぃぃぃ"
-      elsif event.message["text"].include?("行ってきます")
-        response = "どこいくの？どこいくの？どこいくの？寂しい寂しい寂しい。。。"
-      elsif event.message['text'].include?("おはよう")
-        response = "おはよう。なんで今まで連絡くれなかったの？"
-      else
-        response = @post.name
-      end
-
         case event
         when Line::Bot::Event::Message
           case event.type
+            #コメントが来たら
           when Line::Bot::Event::MessageType::Text
             message = {
               type: 'text',
-              text: response
+              text: "https://railsdoc.com/"
             }
           end
         end
