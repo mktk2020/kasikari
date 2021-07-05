@@ -19,9 +19,10 @@ class LinebotController < ApplicationController
           case event.type
             #コメントが来たら
           when Line::Bot::Event::MessageType::Text
+            url = "https://railsdoc.com/"
             message = {
               type: 'text',
-              text: "https://railsdoc.com/"
+              text: url
             }
           end
         end
