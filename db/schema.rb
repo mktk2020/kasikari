@@ -52,6 +52,13 @@ ActiveRecord::Schema.define(version: 2021_07_05_022435) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "lineids", force: :cascade do |t|
+    t.string "line_id"
+    t.string "flag"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.text "userid"
     t.text "username"
