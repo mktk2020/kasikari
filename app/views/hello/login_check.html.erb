@@ -1,10 +1,9 @@
 <h1 class="display-4 text-primary">
   マイページ</h1>
 
-  <p>●ユーザ名●</p>
-  <%= @account.email %>
-<p><%= @msg %></p>
-<h4><%= link_to '〇ユーザ新規登録', '/users/new' %></h4>
+<p>●<%= @account.u_name %>様●</p>
+<p>メールアドレス:<%= @account.email %></p>
+<strong><p><%= link_to '〇ユーザー情報編集', '/accounts/edit' %></p></strong>
 <hr>
 <ul>
   <h4><li><%=link_to '検索','/lendingitems/kensaku' %></li></h4>

@@ -1,6 +1,7 @@
 class LendingitemsController < ApplicationController
   before_action :set_lendingitem, only: %i[ show edit update destroy ]
   before_action :set_q, only: [:index, :search]
+  before_action :set_category, only: [:new, :create, :edit, :update]
 
   # GET /lendingitems or /lendingitems.json
   def index
@@ -14,7 +15,6 @@ class LendingitemsController < ApplicationController
   # GET /lendingitems/new
   def new
     @lendingitem = Lendingitem.new
-    @category = Category.all
   end
 
   # GET /lendingitems/1/edit
@@ -71,18 +71,24 @@ class LendingitemsController < ApplicationController
   def kakunin
     @lendingitem = Lendingitem.find(params[:id])
   end
+
   private
 
   def set_q
     @q = Lendingitem.ransack(params[:q])
   end
-    # Use callbacks to share common setup or constraints between actions.
-    def set_lendingitem
-      @lendingitem = Lendingitem.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def lendingitem_params
-      params.require(:lendingitem).permit(:jancode, :item, :category, :image_name, :price, :days, :memo)
-    end
+  def set_category
+    @category = Category.all
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_lendingitem
+    @lendingitem = Lendingitem.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def lendingitem_params
+    params.require(:lendingitem).permit(:jancode, :item, :category, :image_name, :price, :days, :memo)
+  end
 end
