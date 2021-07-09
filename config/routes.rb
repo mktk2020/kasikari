@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :lineids
   get 'lendingitems/kensaku'
   post 'lendingitems/kakunin/:id',to: "lendingitems#kakunin"
+  #ラインボット
+  post '/callback' => 'linebot#callback'
   resources :lendingitems do
     collection do 
       get 'search'
