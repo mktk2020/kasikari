@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
         '/hello/login_check'
     end
 
-      # deviseのコントローラを使う前に呼ばれるアクション
+  # deviseのコントローラを使う前に呼ばれるアクション
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   private
