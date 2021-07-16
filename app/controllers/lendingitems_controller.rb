@@ -70,6 +70,7 @@ class LendingitemsController < ApplicationController
   #確認画面
   def kakunin
     @lendingitem = Lendingitem.find(params[:id])
+    @num = params['num']
   end
 
   private

@@ -39,7 +39,7 @@
 <%= form_with(url: {controller: 'lendingitems', action: 'kakunin', id: @lendingitem.id}) do |f| %>
   <label>期間</label>
   <%= f.number_field('num') %>
-  <%= f.submit ('借りる')%>
+  <%= f.submit ('最終確認')%>
 <% end %>
 <br>
 <h6><%= link_to '&lt;&lt;戻る'.html_safe,:back %></h6>
