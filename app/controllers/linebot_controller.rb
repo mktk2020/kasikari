@@ -26,7 +26,6 @@ class LinebotController < ApplicationController
             }
           end
         end
-      end
       client.reply_message(event['replyToken'], message)
     end
     head :ok

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :lineids
   get 'lendingitems/kensaku'
   post 'lendingitems/kakunin/:id',to: "lendingitems#kakunin"
+  post 'lendingitems/information_new/:id',to: "lendingitems#information_new"
   #ラインボット
   post '/callback' => 'linebot#callback'
   resources :lendingitems do

@@ -1,13 +1,22 @@
 <h1>確認画面</h1>
+<%= form_with(model: @lending_information, url: {action: 'information_new' }) do |f| %>
 <table>
     <tr>
         <td>商品名</td>
         <td>期間</td>
         <td>金額</td>
     </tr>
+
     <tr>
         <td><%= @lendingitem.item %></td>
         <td><%= @num %></td>
         <td><%= @lendingitem.price.to_i * @num.to_i %></td>
     </tr>
+    <%= f.hidden_field(:item, value: @lendingitem.item) %>
+    <%= f.hidden_field(:days, value: @num) %>
+    <%= f.hidden_field(:lending_days, value: Date.new) %>
+    <%= f.submit('決定') %>
 </table>
+<% end %>
+
+

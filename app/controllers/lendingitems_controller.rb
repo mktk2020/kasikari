@@ -70,7 +70,20 @@ class LendingitemsController < ApplicationController
   #確認画面
   def kakunin
     @lendingitem = Lendingitem.find(params[:id])
+    @lending_information = LendingInformation.new
     @num = params['num']
+  end
+
+  #貸出
+  def information_new
+    if request.post? 
+      obj =  LendingInformation.create(
+        item: params['lending_information']['item'],
+        days: params['lending_information']['days'],
+        lending_days: params['lending_information']['lending_days']
+      )
+    end
+    redirect_to '/lendingitems'
   end
 
   private
