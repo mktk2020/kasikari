@@ -8,8 +8,13 @@
     <%= f.text_field :u_name, autofocus: true, autocomplete: "u_name" , placeholder: "最大10文字", maxlength: 10 %>
   </div>
 
+   <div class="field">
+    <%= f.label  "都道府県" %><br />
+    <%= f.text_field :prefecture, autofocus: true, autocomplete: "prefecture"  %>
+  </div>
+
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -18,7 +23,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
+    <%= f.label "新しいパスワード" %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it') %>)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
@@ -27,12 +32,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label "新しいパスワードをもう一度入力" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
+    <%= f.label "現在のパスワード" %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes') %>)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
