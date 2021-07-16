@@ -27,8 +27,8 @@
         <td><%= lendingitem.days %></td>
         <td><%= lendingitem.memo %></td>
         <td><%= link_to '詳細', lendingitem %></td>
-        <td><%= link_to '変更', edit_lendingitem_path(lendingitem) %></td>
-        <td><%= link_to '削除', lendingitem, method: :delete, data: { confirm: '本当に削除していいですか?' } %></td>
+        <%# <td><%= link_to '変更', edit_lendingitem_path(lendingitem) </td>
+        <td><%= link_to '削除', lendingitem, method: :delete, data: { confirm: '本当に削除していいですか?' } </td> %>
       </tr>
     <% end %>
   </tbody>
