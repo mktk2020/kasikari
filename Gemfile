@@ -64,3 +64,4 @@ gem 'devise-i18n-views'
 #画像アップロード用
 gem 'carrierwave', '~> 1.0'
 
+
